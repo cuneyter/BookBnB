@@ -116,13 +116,6 @@ GEM
     method_source (1.0.0)
     mimemagic (0.3.5)
     mini_mime (1.0.2)
-<<<<<<< HEAD
-    minitest (5.14.3)
-    msgpack (1.4.2)
-    nio4r (2.5.5)
-    nokogiri (1.11.1-x86_64-darwin)
-      racc (~> 1.4)
-=======
     mini_portile2 (2.5.0)
     minitest (5.14.3)
     msgpack (1.4.2)
@@ -131,7 +124,6 @@ GEM
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     orm_adapter (0.5.0)
->>>>>>> master
     pg (1.2.3)
     pry (0.13.1)
       coderay (~> 1.1)
@@ -183,12 +175,9 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.0.3)
-<<<<<<< HEAD
-=======
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
->>>>>>> master
     rubyzip (2.3.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -222,11 +211,8 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-<<<<<<< HEAD
-=======
     warden (1.2.9)
       rack (>= 2.0.9)
->>>>>>> master
     web-console (4.1.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -249,21 +235,15 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-<<<<<<< HEAD
   x86_64-darwin-19
-=======
   ruby
->>>>>>> master
 
 DEPENDENCIES
   autoprefixer-rails
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
-<<<<<<< HEAD
-=======
   devise
->>>>>>> master
   dotenv-rails
   font-awesome-sass
   jbuilder (~> 2.7)
