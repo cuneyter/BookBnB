@@ -1,10 +1,6 @@
 class Flat < ApplicationRecord
   # belongs_to :user
 
-  validates :address_line_1, presence: true
-  validates :address_line_2, presence: true
-  validates :postcode, presence: true
-  validates :city, presence: true
-  validates :price, presence: true
-  validates :max_guest_number, presence: true
+  validates :address_line_1, :address_line_2, :postcode, :city, presence: true
+  validates :price, :max_guest_number, presence: true, numericality: true
 end
