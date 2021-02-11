@@ -11,7 +11,7 @@ require 'faker'
 puts 'Creating Users...'
 5.times do
   user = User.new(
-    email: Faker::Internet.email,
+    email: Faker::Internet.email(domain: 'example'),
     password: '123456'
   )
   user.save!
