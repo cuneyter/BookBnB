@@ -17,13 +17,15 @@
         <% @flats.each do |flat| %>
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img src="https://source.unsplash.com/random/400x400" class="img-fluid"/>
+            <img src="https://source.unsplash.com/random/400x400/?rooms" class="img-fluid"/>
             <div class="card-body">
               <p class="card-text">Address: <%= flat.address_line_1 %>, <%= flat.city %></p>
               <p class="card-text">Postcode: <%= flat.postcode %></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
+                <%= link_to flat_path(flat) do %>
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <% end %>
                   <%# <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> %>
                 </div>
                 <small class="">Price: £<%= flat.price %></small>
