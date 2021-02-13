@@ -24,6 +24,6 @@ class FlatsController < ApplicationController
   # private
 
   # def flat_params
-  #   params.require(:flat).permit(:city, :price)
+  #   params.require(:flat).permit(:city)
   # end
 end
