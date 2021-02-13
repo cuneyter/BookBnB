@@ -1,0 +1,6 @@
+<h1>My flats</h1>
+<ul>
+  <% @flats.each do |flat| %>
+  <li><%= link_to flat.city, flat_path(flat) %></li>
+  <% end %>
+</ul>
