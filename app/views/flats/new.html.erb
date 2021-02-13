@@ -1,0 +1,8 @@
+<h1>Create flat</h1>
+<%= simple_form_for(@flat) do |f| %>
+  <%= f.input :address_line_1 %>
+  <%= f.input :postcode %>
+  <%= f.input :city %>
+  <%= f.input :price %>
+  <%= f.submit %>
+<% end %>
