@@ -8,6 +8,11 @@
 
 require 'faker'
 
+puts 'Cleaning up database'
+Booking.destroy_all
+Flat.destroy_all
+puts 'Database is clean'
+
 puts 'Creating Users...'
 5.times do
   user = User.new(
@@ -20,10 +25,13 @@ end
 puts 'Finished!'
 
 puts 'Creating Flats...'
-5.times do
+10.times do
   flat = Flat.new(
     city: Faker::Address.city,
-    user_id: [1, 2].sample
+    address_line_1: Faker::Address.street_address,
+    postcode: Faker::Address.postcode,
+    price: Faker::Number.decimal(l_digits: 3, r_digits: 3),
+    user_id: 1
   )
   flat.save!
   puts "Flat #{flat.city} created"
@@ -31,9 +39,9 @@ end
 puts 'Finished!'
 
 puts 'Creating Bookings...'
-5.times do
+10.times do
   booking = Booking.new(
-    flat_id: [1, 2, 3, 4, 5].sample,
+    flat_id: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].sample,
     user_id: [1, 2, 3, 4, 5].sample
   )
   booking.save!
