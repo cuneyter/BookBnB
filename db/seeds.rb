@@ -8,10 +8,10 @@
 
 require 'faker'
 
-puts 'Cleaning up database'
-Booking.destroy_all
-Flat.destroy_all
-puts 'Database is clean'
+# puts 'Cleaning up database'
+# Booking.destroy_all
+# Flat.destroy_all
+# puts 'Database is clean'
 
 puts 'Creating Users...'
 5.times do
@@ -42,7 +42,9 @@ puts 'Creating Bookings...'
 10.times do
   booking = Booking.new(
     flat_id: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].sample,
-    user_id: [1, 2, 3, 4, 5].sample
+    user_id: [1, 2, 3, 4, 5].sample,
+    start_date: Faker::Date.between(from: '2022-09-23', to: '2025-09-25'),
+    end_date: Faker::Date.between(from: '2022-09-23', to: '2025-09-25')
   )
   booking.save!
   puts "Booking #{booking.user_id} created"
