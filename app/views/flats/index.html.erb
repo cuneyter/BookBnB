@@ -3,7 +3,7 @@
   <section class="jumbotron text-center">
     <div class="container">
       <h1>Welcome to BookBnB</h1>
-      <p class="lead text-muted">You can see all available flats for your next holiday. Enjoy :)</p>
+      <p class="lead text-muted">You are in the right palce if you are looking for your next escape. Search and find your next trip destination. Enjoy :)</p>
       <%# <p> %>
         <%# <a href="#" class="btn btn-primary my-2">Main call to action</a> %>
         <%# <a href="#" class="btn btn-secondary my-2">Secondary action</a> %>
@@ -19,7 +19,9 @@
           <div class="card mb-4 shadow-sm">
             <img src="https://source.unsplash.com/random/400x400/?rooms" class="img-fluid"/>
             <div class="card-body">
-              <p class="card-text">Address: <%= flat.address_line_1 %>, <%= flat.city %></p>
+              <p class="card-text">Address:</p>
+              <p class="card-text">Street: <%= flat.address_line_1 %></p>
+              <p class="card-text">City: <%= flat.city %></p>
               <p class="card-text">Postcode: <%= flat.postcode %></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
