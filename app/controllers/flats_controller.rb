@@ -14,6 +14,7 @@ class FlatsController < ApplicationController
 
   def create
     @flat = Flat.new(flat_params)
+    @flat.user_id = 1 #this needs to be changed going forward according to users going forward
     if @flat.save
       redirect_to flat_path(@flat)
     else
