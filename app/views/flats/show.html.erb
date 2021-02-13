@@ -1,7 +1,20 @@
-  <h1>My show page</h1>
-  <ul>
-    <li><%= @flat.city %></li>
-    <li><%= @flat.address_line_1 %></li>
-    <li><%= @flat.postcode %></li>
-    <li><%= @flat.price %></li>
-  </ul>
+<body style=" background: url('https://source.unsplash.com/random/?rooms') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;">
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <main role="main" class="inner cover">
+    <h1>My show page</h1>
+    <ul>
+      <li><%= @flat.city %></li>
+      <li><%= @flat.address_line_1 %></li>
+      <li><%= @flat.postcode %></li>
+      <li><%= @flat.price %></li>
+    </ul>
+    <%= link_to "Back to all flats", flats_path(@flats), class: 'btn btn-primary' %>
+  </main>
+</div>
+
+</body>
