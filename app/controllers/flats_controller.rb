@@ -1,4 +1,6 @@
 class FlatsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[show index]
+
   def index
     @flats = Flat.all
   end
@@ -14,7 +16,7 @@ class FlatsController < ApplicationController
 
   def create
     @flat = Flat.new(flat_params)
-    @flat.user_id = 1 #this needs to be changed going forward according to users going forward
+    @flat.user_id = 1 #this needs to be changed going forward according to users sign
     if @flat.save
       redirect_to flat_path(@flat)
     else
