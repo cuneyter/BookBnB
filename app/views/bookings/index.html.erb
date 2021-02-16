@@ -1,21 +1,33 @@
-<div class="banner">
-  <div class="banner-content">
-    <h1>Your bookings</h1>
-    <%= link_to "Add a bookings", new_booking_path, class: "btn btn-primary btn-lg" %>
-  </div>
-</div>
-<div class="container">
-  <div class="row">
-    <% @bookings.each do |booking| %>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card">
-          <div class="card-description">
-            <h2><%= booking.start_date %></h2>
-            <h2><%= booking.end_date %></h2>
+<main role="main">
+
+  <section class="text-center">
+    <div class="container">
+      <h1>Your bookings</h1>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <% @bookings.each do |booking| %>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text"><%= booking.id %>. <%= booking.flat.city %></p>
+              <p class="card-text">Start: <%= booking.start_date %></p>
+              <p class="card-text">End: <%= booking.end_date %></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <%= link_to booking_path(booking) do %>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <% end %>
+                </div>
+              </div>
+            </div>
           </div>
-          <%= link_to "", booking_path(booking), class: 'card-link' %>
         </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
-</div>
+</main>
