@@ -6,15 +6,20 @@
 
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <main role="main" class="inner cover">
-    <h1>My show page</h1>
-    <ul>
-      <li><%= @flat.city %></li>
-      <li><%= @flat.address_line_1 %></li>
-      <li><%= @flat.postcode %></li>
-      <li><%= @flat.price %></li>
-    </ul>
-    <%= link_to "Back to all flats", flats_path(@flats), class: 'btn btn-primary' %>
-    <%= link_to "Book this flat", new_flat_booking_path(@flat), class: 'btn btn-primary' %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Beautiful space</h5>
+        <ul>
+          <li><%= @flat.city %></li>
+          <li><%= @flat.address_line_1 %>Address</li>
+          <li><%= @flat.postcode %>Postcode</li>
+          <li><%= @flat.price %> Price: £</li>
+        </ul>
+        <div class="d-grid gap-2 d-md-block col-10 mx-auto">
+          <%= link_to "Back", flats_path(@flats), class: 'btn btn-outline-secondary' %>
+          <%= link_to "Book flat", new_flat_booking_path(@flat), class: 'btn btn-primary' %>
+        </div>
+    </div>
   </main>
 </div>
 
