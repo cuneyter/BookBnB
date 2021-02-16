@@ -1,5 +1,5 @@
 
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon bg-transparent">
   <%= link_to "#", class: "navbar-brand" do %>
     <%= image_tag "logo.png" %>
     <% end %>
@@ -28,7 +28,7 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Sign In", new_user_session_path, class: "btn btn-primary nav-link", style: "color: white" %>
         </li>
       <% end %>
     </ul>
