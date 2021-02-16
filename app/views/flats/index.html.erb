@@ -1,16 +1,38 @@
-<main role="main">
+<style>
 
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1>Welcome to BookBnB</h1>
-      <p class="lead text-muted">You are in the right place if you are looking for your next escape. Search and find your next trip destination. Enjoy :)</p>
-      <a href="/flats" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Create a booking</a>
-      <%# <p> %>
-        <%# <a href="#" class="btn btn-primary my-2">Main call to action</a> %>
-        <%# <a href="#" class="btn btn-secondary my-2">Secondary action</a> %>
-      <%# </p> %>
-    </div>
-  </section>
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  /* opacity: .7; */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+</style>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/tleCJiDOri0/1600x900);">
+  <div class="container">
+    <h1 class="test">Welcome to <strong>BookBnB</strong></h1>
+    <p>Looking for your next escape. Search and find your next destination.</p>
+    <a class="btn btn-primary btn-lg" href="/flats" role="button" aria-pressed="true">Book your stay</a>
+  </div>
+</div>
+
+<main role="main">
 
   <div class="album py-5 bg-light">
     <div class="container">
@@ -20,10 +42,7 @@
           <div class="card mb-4 shadow-sm">
             <img src="https://source.unsplash.com/random/400x400/?rooms" class="img-fluid"/>
             <div class="card-body">
-              <p class="card-text">Address:</p>
-              <p class="card-text">Street: <%= flat.address_line_1 %></p>
-              <p class="card-text">City: <%= flat.city %></p>
-              <p class="card-text">Postcode: <%= flat.postcode %></p>
+              <p class="card-text"><%= flat.city %></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                 <%= link_to flat_path(flat) do %>
