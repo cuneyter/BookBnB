@@ -1,8 +1,7 @@
-<%= form_for(@booking) do |f| %>
-<%# @booking, @flat %>
 <div class="container pt-5">
   <div class="row justify-content-center">
     <div class="col-12 col-md-6 col-lg-4">
+<%= simple_form_for [ @flat,  @booking ] do |f| %>
       <form action="/home">
         <h2 class="text-center mb-5">Create a booking</h2>
         <div class="form-row">
@@ -16,8 +15,8 @@
           </div>
           <%= f.submit class: 'btn btn-primary btn-lg w-100', style: 'margin: 5px' %>
       </form>
+<% end %>
       <a href="/flats" class="btn btn-primary btn-lg w-100" style="background-color: red; border-color: red; margin: 5px" role="button" aria-pressed="true">Cancel</a>
     </div>
   </div>
 </div>
-<% end %>
