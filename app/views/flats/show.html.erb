@@ -14,6 +14,7 @@
       <li><%= @flat.price %></li>
     </ul>
     <%= link_to "Back to all flats", flats_path(@flats), class: 'btn btn-primary' %>
+    <%= link_to "Book this flat", new_flat_booking_path(@flat), class: 'btn btn-primary' %>
   </main>
 </div>
 
