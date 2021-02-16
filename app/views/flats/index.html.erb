@@ -20,10 +20,7 @@
           <div class="card mb-4 shadow-sm">
             <img src="https://source.unsplash.com/random/400x400/?rooms" class="img-fluid"/>
             <div class="card-body">
-              <p class="card-text">Address:</p>
-              <p class="card-text">Street: <%= flat.address_line_1 %></p>
-              <p class="card-text">City: <%= flat.city %></p>
-              <p class="card-text">Postcode: <%= flat.postcode %></p>
+              <p class="card-text"><%= flat.city %></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                 <%= link_to flat_path(flat) do %>
