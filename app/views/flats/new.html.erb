@@ -1,14 +1,23 @@
+<body style=" background: url('https://media.architecturaldigest.com/photos/59c01c74eabdd92dfd3b9ed9/16:9/w_2560%2Cc_limit/1017-AD-DIRA01-01_sq.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;">
+
 <div class="container">
-  <div class="row justify-content-center">
+  <div class="row justify-content-center" style="opacity: .95">
     <div class="col-6">
-      <h1>Create flat</h1>
-      <%= simple_form_for(@flat) do |f| %>
-        <%= f.input :address_line_1 %>
-        <%= f.input :postcode %>
-        <%= f.input :city %>
-        <%= f.input :price %>
-        <%= f.submit %>
-      <% end %>
+      <div class="card mt-3" style="border-radius: 30px">
+        <article class="card-body">
+          <h1 style="text-align: center">Add a flat</h1>
+          <%= simple_form_for(@flat) do |f| %>
+            <%= f.input :address_line_1 %>
+            <%= f.input :postcode %>
+            <%= f.input :city %>
+            <%= f.input :price %>
+            <%= f.submit :submit, class: "btn btn-primary w-100"%>
+          <% end %>
+      </div>
     </div>
   </div>
 </div>
