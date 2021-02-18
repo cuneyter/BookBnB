@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
-  #slip_before_action :authenticate_user!, only: :home
+  skip_before_action :authenticate_user!, only: :home
 
   def home
+    @flats = Flat.all
   end
 end

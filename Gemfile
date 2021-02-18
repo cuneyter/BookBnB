@@ -35,6 +35,9 @@ gem 'simple_form'
 # add FAKER gem
 gem 'faker'
 
+# add geocoder gem
+gem 'geocoder'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
@@ -66,4 +69,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# devise gem
 gem 'devise'
+
+# cloudinary gem
+gem 'cloudinary', '~> 1.16.0'
