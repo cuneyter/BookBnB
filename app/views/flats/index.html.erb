@@ -5,15 +5,30 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 
+<<<<<<< HEAD
 <main role="main">
 
+=======
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>Welcome to BookBnB</h1>
+      <p class="lead text-muted">You are in the right place if you are looking for your next escape. Search and find your next trip destination. Enjoy :)</p>
+      <a href="/flats" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Create a booking</a>
+      <%# <p> %>
+        <%# <a href="#" class="btn btn-primary my-2">Main call to action</a> %>
+        <%# <a href="#" class="btn btn-secondary my-2">Secondary action</a> %>
+      <%# </p> %>
+    </div>
+  </section>
+>>>>>>> 43eb42181c1d4141dea42ef26e7b0d8e604f8630
   <div class="album py-5 bg-light">
     <div class="container">
       <div class="row">
         <% @flats.each do |flat| %>
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img src="https://source.unsplash.com/random/400x400/?rooms" class="img-fluid"/>
+            <%= cl_image_tag flat.photo.key, class: "img-fluid" %>
+            <%# <img src="https://source.unsplash.com/random/400x400/?rooms" class="img-fluid"/> %>
             <div class="card-body">
               <p class="card-text"><%= flat.city %></p>
               <div class="d-flex justify-content-between align-items-center">
