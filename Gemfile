@@ -69,4 +69,11 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# devise gem
 gem 'devise'
+<<<<<<< HEAD
+
+# cloudinary gem
+=======
+>>>>>>> 43eb42181c1d4141dea42ef26e7b0d8e604f8630
+gem 'cloudinary', '~> 1.16.0'
