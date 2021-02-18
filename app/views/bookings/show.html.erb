@@ -1,6 +1,18 @@
 <div class="container">
-  <h1><%= @booking.start_date %></h1>
-   <h1><%= @booking.end_date %></h1>
-  <%= link_to "Back to home page", root_path %>
+
+  <body style=" background: url('https://www.galeriemagazine.com/wp-content/uploads/2019/07/1157001_webcover-1920x1200.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;">
+
+    <div class="card mb-4 shadow-sm text-center" style="opacity: .8">
+      <div class="card-body">
+        <h3>Congratulations, you succesfully created a booking</h3>
+        <p> Start: <%= @booking.start_date %></p>
+        <p> End: <%= @booking.end_date %></p>
+      </div>
+    </div>
+  <%= link_to "Back to home page", root_path, class: "btn btn-sm btn-outline-secondary", style: "background-color: white; opacity: .8" %>
 
 </div>
