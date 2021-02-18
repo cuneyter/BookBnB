@@ -35,6 +35,9 @@ gem 'simple_form'
 # add FAKER gem
 gem 'faker'
 
+# add geocoder gem
+gem 'geocoder'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
