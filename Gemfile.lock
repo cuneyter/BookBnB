@@ -108,7 +108,6 @@ GEM
     geocoder (1.6.5)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-<<<<<<< HEAD
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -137,12 +136,12 @@ GEM
     msgpack (1.4.2)
     netrc (0.11.0)
     nio4r (2.5.5)
-    nokogiri (1.11.1-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.11.1-x86_64-linux)
     nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
+    nokogiri (1.11.1-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.11.1-x86_64-linux)
     orm_adapter (0.5.0)
     pg (1.2.3)
     pry (0.13.1)
@@ -261,9 +260,9 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
+  ruby
   x86_64-darwin-19
   x86_64-linux
-  ruby
 
 DEPENDENCIES
   autoprefixer-rails
@@ -297,4 +296,4 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
-   2.1.4
+   2.2.9
