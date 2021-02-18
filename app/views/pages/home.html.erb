@@ -14,7 +14,7 @@
         <% @flats.each do |flat| %>
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img src="https://source.unsplash.com/random/400x400/?rooms" class="img-fluid"/>
+            <%= cl_image_tag flat.photo.key, class: "img-fluid" %>
             <div class="card-body">
               <p class="card-text"><%= flat.city %></p>
               <div class="d-flex justify-content-between align-items-center">
