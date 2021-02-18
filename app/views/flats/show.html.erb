@@ -4,15 +4,14 @@
     -o-background-size: cover;
     background-size: cover;">
 
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" style="border-radius: 30px; opacity: .90">
   <main role="main" class="inner cover">
     <div class="card" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Beautiful space</h5>
-          <li><%= @flat.city %></li>
+        <h5 class="card-title"><%= @flat.city %></h5>
           <li><%= @flat.address_line_1 %></li>
           <li><%= @flat.postcode %></li>
-          <h5 class="card-trip-pricing d-flex m-2 mr-auto"><%= @flat.price %> £</h5>
+          <h5 class="card-trip-pricing m-2 text-right"><%= @flat.price %> £</h5>
         <div class="d-grid gap-2 d-md-block col-10 mx-auto">
           <%= link_to "Back", flats_path(@flats), class: 'btn btn-outline-secondary' %>
           <%= link_to "Book flat", new_flat_booking_path(@flat), class: 'btn btn-primary' %>
