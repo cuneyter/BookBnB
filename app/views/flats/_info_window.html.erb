@@ -1,4 +1,6 @@
-<h2><%= flat.address_line_1 %></h2>
-<h2><%= flat.city %></h2>
-<h4>£<%= flat.price %></h4>
+<%= link_to flat_path(flat) do %>
+  <h2><%= flat.address_line_1 %></h2>
+  <h2><%= flat.city %></h2>
+  <h4>£<%= flat.price %></h4>
+<% end %>
 
