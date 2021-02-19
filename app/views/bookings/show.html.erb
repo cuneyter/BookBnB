@@ -13,6 +13,8 @@
         <p> End: <%= @booking.end_date %></p>
       </div>
     </div>
+
   <%= link_to "Back to home page", root_path, class: "btn btn-sm btn-outline-secondary", style: "background-color: white; opacity: .8" %>
+  <%= link_to "Cancel this booking", booking_path(@booking), method: :delete, data: { confirm: "Are you sure you want to cancel booking?" }, class: "btn btn-sm btn-outline-secondary", style: "background-color: white; opacity: .8" %>
 
 </div>
