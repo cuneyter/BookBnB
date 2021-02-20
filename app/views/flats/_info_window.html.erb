@@ -12,7 +12,9 @@
               <p class="card-text"><%= flat.city %></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
+                <%= link_to flat_path(flat) do %>
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <% end %>
                   <%# <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> %>
                 </div>
                 <small class="h4 fw-bold m-0">£<%= flat.price %></small>
