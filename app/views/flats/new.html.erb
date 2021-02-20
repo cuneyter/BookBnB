@@ -15,7 +15,7 @@
             <%= f.input :postcode %>
             <%= f.input :city %>
             <%= f.input :price %>
-            <%= f.input :photo, as: :file %>
+            <%= f.input :photos, as: :file, input_html: { multiple: true } %>
             <%= f.submit :submit, class: "btn btn-primary w-100"%>
           <% end %>
       </div>

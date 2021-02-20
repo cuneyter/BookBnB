@@ -36,7 +36,7 @@ def create_flat_with_photo(uri)
     price: Faker::Number.decimal(l_digits: 3, r_digits: 3),
     user_id: 1
   )
-  flat.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+  flat.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   flat.save!
   puts "Flat #{flat.city} created"
 end
