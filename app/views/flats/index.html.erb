@@ -1,10 +1,15 @@
-
-<div id="map"
-    style="width: 100%; height: 600px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+<div class="container text-center">
+  <h1>Search for your stay</h1>
+  <div id="map"
+      style="width: 100%; height: 700px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
 
+
+<%
+=begin
 <main role="main">
 
   <div class="album py-5 bg-light">
@@ -37,3 +42,4 @@
   </div>
 
 </main>
+=end %>
