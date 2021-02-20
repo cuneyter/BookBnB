@@ -18,6 +18,11 @@
         <% @bookings.each do |booking| %>
         <div class="col-md-6">
           <div class="card mb-4 shadow-sm">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="<%= cl_image_path booking.flat.photos.first.key %>" class="w-100">
+              </div>
+              <div class="col-md-8">
             <div class="card-body text-center">
               <p class="card-text text-center" style="font-weight: bold"><%= booking.flat.city %></p>
               <p class="card-text">Start: <%= booking.start_date %></p>
@@ -31,6 +36,12 @@
                 </div>
               </div>
             </div>
+    </div>
+  </div>
+
+
+
+
           </div>
         </div>
         <% end %>
