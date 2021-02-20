@@ -1,6 +1,6 @@
 <div class="container">
 
-  <body style=" background: url('https://www.galeriemagazine.com/wp-content/uploads/2019/07/1157001_webcover-1920x1200.jpg') no-repeat center center fixed;
+  <body style=" background: url('<%= cl_image_path @booking.photos.first.key %>') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -14,7 +14,10 @@
       </div>
     </div>
 
-  <%= link_to "Back to home page", root_path, class: "btn btn-sm btn-outline-secondary", style: "background-color: white; opacity: .8" %>
-  <%= link_to "Cancel this booking", booking_path(@booking), method: :delete, data: { confirm: "Are you sure you want to cancel booking?" }, class: "btn btn-sm btn-outline-secondary", style: "background-color: white; opacity: .8" %>
+    <div class="text-center">
+      <%= link_to "Back to home page", root_path, class: "btn btn-sm btn-outline-secondary", style: "background-color: white; opacity: .8" %>
+      <%= link_to "Cancel this booking", booking_path(@booking), method: :delete, data: { confirm: "Are you sure you want to cancel booking?" }, class: "btn btn-sm btn-outline-secondary", style: "background-color: white; opacity: .8" %>
+    </div>
+
 
 </div>
