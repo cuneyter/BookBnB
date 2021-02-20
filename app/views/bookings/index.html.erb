@@ -14,19 +14,20 @@
 
   <div class="album py-5 bg-light">
     <div class="container">
-      <div class="row">
+      <div class="row justify-content-center">
         <% @bookings.each do |booking| %>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text text-center" style="font-weight: bold"><%= booking.id %>. <%= booking.flat.city %></p>
+            <div class="card-body text-center">
+              <p class="card-text text-center" style="font-weight: bold"><%= booking.flat.city %></p>
               <p class="card-text">Start: <%= booking.start_date %></p>
               <p class="card-text">End: <%= booking.end_date %></p>
-              <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-center align-items-center">
                 <div class="btn-group">
                 <%= link_to booking_path(booking) do %>
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                 <% end %>
+                <%= link_to "Cancel this booking", booking_path(booking), method: :delete, data: { confirm: "Are you sure you want to cancel booking?" }, class: "btn btn-sm btn-outline-secondary mx-3" %>
                 </div>
               </div>
             </div>
